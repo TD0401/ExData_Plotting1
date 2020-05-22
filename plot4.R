@@ -25,7 +25,7 @@ plotMatrixGraph <- function(){
     #Setting Graphic Device as png file with mentioned height and width
     png(file="plot4.png" , width = 480 , height = 480)
     
-    #plotting the historgram with the desired attributes
+    #plotting the multiple plots in a 2 x 2 matrix with the desired attributes
     datetime_vect <- strptime( paste(powerData$Date , powerData$Time) , "%d/%m/%Y %H:%M:%S")
     par(mfrow = c(2,2) , mar = c(4,4,2,2))
     plot(x= datetime_vect,  y = powerData$Global_active_power, type="l", xlab="" , ylab = "Global Active Power")

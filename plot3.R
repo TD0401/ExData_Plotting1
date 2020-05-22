@@ -25,7 +25,7 @@ plotMultiLineGraph <- function(){
     #Setting Graphic Device as png file with mentioned height and width
     png(file="plot3.png" , width = 480 , height = 480)
     
-    #plotting the historgram with the desired attributes
+    #plotting the line graph for multiple attribute with the desired attributes. first set the plot then add lines
     datetime_vect <- strptime( paste(powerData$Date , powerData$Time) , "%d/%m/%Y %H:%M:%S")
     plot(x= datetime_vect,  y = powerData$Sub_metering_1,
          type="n", xlab="", ylab = "Energy sub metering" )
